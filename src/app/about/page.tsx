@@ -75,9 +75,9 @@ export default function About() {
 
           <Link
             href="/letter"
-            className="mb-8 inline-flex items-center gap-2 rounded-full bg-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-teal-500 dark:bg-teal-500 dark:hover:bg-teal-400"
+            className="mb-8 inline-block rounded-lg border border-teal-600 bg-teal-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-500 hover:border-teal-500 dark:border-teal-500 dark:bg-teal-500 dark:hover:bg-teal-400 dark:hover:border-teal-400"
           >
-            📩 Lire la lettre du frerot !
+            Lire la lettre du frerot
           </Link>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
