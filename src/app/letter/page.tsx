@@ -208,7 +208,7 @@ export default function Letter() {
             </div>
           </div>
 
-          {/* Section 5: Timeline */}
+          {/* Section 4: Timeline */}
           <div className="mt-12 rounded-xl bg-gradient-to-br from-teal-50 to-zinc-50 p-8 shadow-sm dark:from-zinc-800/50 dark:to-zinc-900/50">
             <h2 className="mb-8 text-2xl font-bold text-zinc-800 dark:text-zinc-100">
               Ce qui se passe ensuite
@@ -223,7 +223,7 @@ export default function Letter() {
                   Tu réponds
                 </h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  Clique sur "Répondre maintenant" et envoie-moi tes 9 réponses
+                  Clique sur "Répondre maintenant" et envoie-moi tes 8 réponses
                 </p>
               </div>
 
@@ -232,10 +232,10 @@ export default function Letter() {
                   2
                 </div>
                 <h3 className="mb-2 font-semibold text-zinc-800 dark:text-zinc-100">
-                  J'analyse
+                  Je monte un plan d'action
                 </h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  Je regarde où sont les plus gros gaps et opportunités
+                  À partir de tes réponses, je construis un plan concret
                 </p>
               </div>
 
@@ -244,22 +244,10 @@ export default function Letter() {
                   3
                 </div>
                 <h3 className="mb-2 font-semibold text-zinc-800 dark:text-zinc-100">
-                  Je planifie
+                  Je teste et j'exécute
                 </h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  Plan d'action concret avec ordre de priorité
-                </p>
-              </div>
-
-              <div className="relative">
-                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-teal-500 text-xl font-bold text-white">
-                  4
-                </div>
-                <h3 className="mb-2 font-semibold text-zinc-800 dark:text-zinc-100">
-                  J'exécute
-                </h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  Je teste, j'optimise, je construis ton infrastructure
+                  Je teste des trucs pour faire découvrir tes livres
                 </p>
               </div>
             </div>
