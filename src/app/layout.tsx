@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className="h-full antialiased" suppressHydrationWarning>
-      <body className={`flex h-full bg-zinc-50 dark:bg-deep-black ${monaSans.variable} ${ebGaramond.variable} font-sans`}>
+      <body className={`flex h-full bg-zinc-50 dark:bg-[#060102] ${monaSans.variable} ${ebGaramond.variable} font-sans`}>
         <Providers>
           <div className="flex w-full">
             <Layout>{children}</Layout>

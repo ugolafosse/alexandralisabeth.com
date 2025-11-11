@@ -15,23 +15,22 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <Container className="mt-16 sm:mt-32">
-        <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-12 lg:gap-y-12">
-          {/* Book Cover */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative max-w-md">
-              <Image
-                src={coverImage}
-                alt="Chronique des Premiers Hommes - Tome 1 : L'Éveil des Âmes"
-                className="rounded-2xl shadow-2xl"
-                priority
-                sizes="(min-width: 1024px) 28rem, 20rem"
-              />
-            </div>
-          </div>
+      <div className="mt-16 flex min-h-[80vh] flex-col lg:flex-row">
+        {/* Book Cover - 40% width, full bleed */}
+        <div className="relative h-[50vh] w-full lg:h-auto lg:w-[40%]">
+          <Image
+            src={coverImage}
+            alt="Chronique des Premiers Hommes - Tome 1 : L'Éveil des Âmes"
+            className="h-full w-full object-cover"
+            priority
+            fill
+            sizes="(min-width: 1024px) 40vw, 100vw"
+          />
+        </div>
 
-          {/* Content */}
-          <div className="flex flex-col justify-center">
+        {/* Content - 60% width */}
+        <Container className="flex flex-1 items-center lg:w-[60%]">
+          <div className="flex flex-col justify-center py-16 lg:py-0">
             <h1 className="font-display text-5xl font-bold tracking-tight text-zinc-800 sm:text-6xl dark:text-zinc-100">
               Chronique des Premiers Hommes
             </h1>
@@ -61,8 +60,8 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
 
       {/* Below the Fold - Book Details */}
       <Container className="mt-24 sm:mt-32">
