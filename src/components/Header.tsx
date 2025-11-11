@@ -367,6 +367,7 @@ export function Header() {
           marginBottom: 'var(--header-mb)',
         }}
       >
+        {/* Avatar hidden on homepage per user request
         {isHomePage && (
           <>
             <div
@@ -405,6 +406,7 @@ export function Header() {
             </Container>
           </>
         )}
+        */}
         <div
           ref={headerRef}
           className="top-0 z-10 h-16 pt-6"
@@ -443,12 +445,14 @@ export function Header() {
           </Container>
         </div>
       </header>
+      {/* Spacer hidden since avatar is removed
       {isHomePage && (
         <div
           className="flex-none"
           style={{ height: 'var(--content-offset)' }}
         />
       )}
+      */}
     </>
   )
 }
