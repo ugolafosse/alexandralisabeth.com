@@ -1,9 +1,24 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client'
 
 import Image from 'next/image'
 import { Container } from '@/components/Container'
 import { Disclosure } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+
+function ChevronDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 8 6" aria-hidden="true" {...props}>
+      <path
+        d="M1.75 1.75 4 4.25l2.25-2.5"
+        fill="none"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        stroke="currentColor"
+      />
+    </svg>
+  )
+}
 
 const diagnosticQuestions = [
   {
@@ -27,15 +42,15 @@ const diagnosticQuestions = [
     section: 'Relation avec Lecteurs',
     questions: [
       {
-        title: 'Est-ce que t'as une liste email ou une communauté ?',
+        title: `Est-ce que t'as une liste email ou une communauté ?`,
         content: `Si t'as pas au moins 50 personnes qui attendent ton prochain livre avec impatience, commence par ça. Les réseaux sociaux, c'est cool, mais une liste email, c'est de l'or.`
       },
       {
-        title: 'Est-ce que les gens qui lisent ton livre en parlent ?',
+        title: `Est-ce que les gens qui lisent ton livre en parlent ?`,
         content: `Si personne laisse d'avis Amazon ou recommande ton livre à ses potes, c'est soit qu'ils l'ont pas aimé, soit qu'ils ont oublié ton existence 5 minutes après avoir fini. Les deux, c'est un problème.`
       },
       {
-        title: 'Est-ce que t'as une présence en ligne qui te ressemble ?',
+        title: `Est-ce que t'as une présence en ligne qui te ressemble ?`,
         content: `Un site web basique, un compte Instagram où tu partages un peu de ton univers... Les lecteurs veulent voir que t'existes, pas juste ton livre.`
       }
     ]
@@ -44,11 +59,11 @@ const diagnosticQuestions = [
     section: 'Qualité & Produit',
     questions: [
       {
-        title: 'Est-ce que ton manuscrit a été relu/édité par quelqu'un qui sait ce qu'il fait ?',
+        title: `Est-ce que ton manuscrit a été relu/édité par quelqu'un qui sait ce qu'il fait ?`,
         content: `Pas ta meilleure amie qui trouve tout génial. Quelqu'un qui peut te dire : "Ça, c'est pas clair" ou "Ce chapitre traîne en longueur." Si non, y'a du travail.`
       },
       {
-        title: 'Est-ce que ton livre est disponible dans plusieurs formats (ebook, papier, audio) ?',
+        title: `Est-ce que ton livre est disponible dans plusieurs formats (ebook, papier, audio) ?`,
         content: `Si t'es que sur Amazon en ebook, t'es en train de te tirer une balle dans le pied. Y'a des gens qui lisent que du papier, d'autres qui écoutent en voiture.`
       }
     ]
@@ -57,7 +72,7 @@ const diagnosticQuestions = [
     section: 'Planification',
     questions: [
       {
-        title: 'Est-ce que t'as un plan pour sortir régulièrement du contenu (pas forcément des livres, mais des nouvelles, des posts, etc.) ?',
+        title: `Est-ce que t'as un plan pour sortir régulièrement du contenu (pas forcément des livres, mais des nouvelles, des posts, etc.) ?`,
         content: `Les auteurs qui percent, c'est ceux qui restent visibles. Si t'as sorti un livre y'a 2 ans et qu'on t'a plus vue depuis, les lecteurs t'ont oubliée.`
       }
     ]
