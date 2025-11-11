@@ -2,214 +2,320 @@
 'use client'
 
 import { Container } from '@/components/Container'
+import Link from 'next/link'
 
-export default function Home() {
+function EmailButton({ className = '' }: { className?: string }) {
+  const emailSubject = "Réponses à tes questions"
+  const emailBody = `Salut !
+
+Voici mes réponses à tes 9 questions :
+
+**AMAZON & VISIBILITÉ**
+
+1. Métadonnées Amazon optimisées ?
+[Ta réponse]
+
+2. Stats mensuelles KDP (pages lues, ventes) ?
+[Ta réponse]
+
+3. Pub Amazon (budget, ACOS) ?
+[Ta réponse]
+
+**RELATION LECTEURS**
+
+4. Liste email (nombre d'abonnés) ?
+[Ta réponse]
+
+5. Nombre d'avis par livre ?
+[Ta réponse]
+
+6. Équipe ARC en place ?
+[Ta réponse]
+
+**QUALITÉ & SUITE**
+
+7. Beta-lecture / Édition professionnelle ?
+[Ta réponse]
+
+8. Satisfaite de tes couvertures ?
+[Ta réponse]
+
+9. Plan d'écriture (prochains livres, timing) ?
+[Ta réponse]
+
+—
+Alexandra`
+
   return (
-    <>
-      <Container className="mt-16 sm:mt-32">
-        {/* Hero Section */}
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Joyeux anniversaire !!
-          </h1>
+    <a
+      href={`mailto:aelafosse@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`}
+      className={`inline-flex items-center gap-2 rounded-full bg-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-teal-500 dark:bg-teal-500 dark:hover:bg-teal-400 ${className}`}
+    >
+      📩 Répondre maintenant
+    </a>
+  )
+}
+
+function QuestionCard({
+  title,
+  icon,
+  questions,
+}: {
+  title: string
+  icon: string
+  questions: { q: string; detail?: string }[]
+}) {
+  return (
+    <div className="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-800/50">
+      <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-100">
+        <span className="text-2xl">{icon}</span>
+        {title}
+      </h3>
+      <ol className="space-y-3">
+        {questions.map((q, i) => (
+          <li
+            key={i}
+            className="text-sm text-zinc-600 dark:text-zinc-400"
+            style={{ listStyleType: 'decimal', marginLeft: '1.25rem' }}
+          >
+            <span className="font-medium">{q.q}</span>
+            {q.detail && (
+              <span className="ml-1 text-zinc-500 dark:text-zinc-500">
+                {q.detail}
+              </span>
+            )}
+          </li>
+        ))}
+      </ol>
+    </div>
+  )
+}
+
+export default function Letter() {
+  return (
+    <Container className="mt-16 sm:mt-32">
+      {/* Hero */}
+      <div className="max-w-2xl">
+        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+          🎂 Joyeux anniversaire
+        </h1>
+        <div className="mt-6">
+          <EmailButton />
         </div>
+      </div>
 
-        {/* Welcome Letter */}
-        <div className="prose-zinc prose mt-16 max-w-none dark:prose-invert">
-          <div className="text-base leading-7 text-zinc-600 dark:text-zinc-400">
+      {/* Letter Content */}
+      <div className="prose-zinc prose mt-16 max-w-none dark:prose-invert">
+        <div className="text-base leading-7 text-zinc-600 dark:text-zinc-400">
+          {/* Section 1: L'anniversaire */}
+          <div className="space-y-4">
+            <p>Oui, je l'ai encore oublié. Et non, ça me fait pas juste "un peu" chier.</p>
+
+            <p>
+              Parce que cette fois, j'y pensais. Depuis des semaines. Depuis
+              notre discussion où tu m'as parlé de ta lassitude avec la chiro,
+              de ton envie de faire de l'écriture ton truc principal.
+            </p>
+
+            <p>Ça m'a pas lâché.</p>
+
+            <p>
+              Tu viens d'avoir ta maison. Ton espace pour écrire. C'est le
+              moment. Alors j'ai acheté ce nom de domaine.
+            </p>
+
+            <p className="font-medium text-zinc-800 dark:text-zinc-100">
+              Pas pour me faire pardonner. Pour te montrer que je suis sérieux.
+            </p>
+          </div>
+
+          {/* Section 2: Le deal */}
+          <div className="mt-12 space-y-4 rounded-2xl border-l-4 border-teal-500 bg-zinc-50 p-6 dark:bg-zinc-800/50">
+            <h2 className="flex items-center gap-2 text-2xl font-bold text-zinc-800 dark:text-zinc-100">
+              <span>🎯</span> Le deal
+            </h2>
+            <p className="text-lg font-medium text-zinc-800 dark:text-zinc-100">
+              Toi, tu écris. Moi, je vends tes livres.
+            </p>
+            <p>
+              Pas parce que tu peux pas le faire toi-même. Mais parce que ton
+              job, c'est d'écrire des univers qui tiennent debout. Le mien,
+              c'est de faire en sorte que les gens les découvrent.
+            </p>
+            <p>
+              La distribution, le marketing, Amazon, les communautés de
+              lecteurs. Tu gardes le contrôle créatif total. Je m'occupe du
+              reste.
+            </p>
+          </div>
+
+          {/* Section 3: Exemples concrets */}
+          <div className="mt-12 space-y-4">
             <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100">
-              Bienvenue sur ton site d'écrivaine
+              Concrètement, voici ce que je vais faire
+            </h2>
+            <div className="space-y-3 text-sm">
+              <div className="flex gap-3">
+                <span className="mt-1 text-teal-500">▸</span>
+                <p>
+                  <strong>Optimisation Amazon</strong> : Tester 50
+                  combinaisons de mots-clés et catégories jusqu'à trouver celles
+                  qui maximisent ta visibilité
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="mt-1 text-teal-500">▸</span>
+                <p>
+                  <strong>Liste email</strong> : Construire une landing page et
+                  une stratégie pour passer de 0 à 1000 abonnés qualifiés en 6
+                  mois
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="mt-1 text-teal-500">▸</span>
+                <p>
+                  <strong>Équipe ARC</strong> : Recruter 50 lecteurs early
+                  access qui laisseront des avis le jour du lancement
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="mt-1 text-teal-500">▸</span>
+                <p>
+                  <strong>Pub Amazon</strong> : Budget test de 200-500€/mois
+                  pour valider ce qui fonctionne, puis scaler
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Section 4: Les questions */}
+          <div className="mt-12">
+            <h2 className="mb-6 flex items-center gap-2 text-2xl font-bold text-zinc-800 dark:text-zinc-100">
+              <span>📋</span> Les 9 questions
+            </h2>
+            <p className="mb-8 text-zinc-600 dark:text-zinc-400">
+              Pour te construire un plan d'action sur mesure, j'ai besoin de
+              savoir exactement où t'en es.
+            </p>
+
+            <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
+              <QuestionCard
+                icon="🔍"
+                title="Amazon & Visibilité"
+                questions={[
+                  {
+                    q: 'Métadonnées Amazon optimisées ?',
+                    detail: '(mots-clés, catégories)',
+                  },
+                  {
+                    q: 'Stats mensuelles KDP ?',
+                    detail: '(pages lues, ventes)',
+                  },
+                  { q: 'Pub Amazon ?', detail: '(budget, ACOS)' },
+                ]}
+              />
+              <QuestionCard
+                icon="💬"
+                title="Relation lecteurs"
+                questions={[
+                  { q: 'Liste email ?', detail: '(nombre d\'abonnés)' },
+                  { q: 'Nombre d\'avis par livre ?' },
+                  { q: 'Équipe ARC en place ?' },
+                ]}
+              />
+              <QuestionCard
+                icon="✨"
+                title="Qualité & Suite"
+                questions={[
+                  { q: 'Beta-lecture / Édition pro ?' },
+                  { q: 'Satisfaite de tes couvertures ?' },
+                  { q: 'Plan d\'écriture ?', detail: '(prochains livres)' },
+                ]}
+              />
+            </div>
+          </div>
+
+          {/* Section 5: Timeline */}
+          <div className="mt-12 rounded-2xl bg-gradient-to-br from-teal-50 to-zinc-50 p-8 dark:from-zinc-800/50 dark:to-zinc-900/50">
+            <h2 className="mb-8 flex items-center gap-2 text-2xl font-bold text-zinc-800 dark:text-zinc-100">
+              <span>🚀</span> Ce qui se passe ensuite
             </h2>
 
-            <p className="mt-6">
-              Bon, déjà : joyeux anniversaire en retard. Je sais, je sais. Les
-              dates et moi, c'est compliqué. Mais cette fois, ça me fait
-              vraiment chier parce que c'est toi, et que justement, je pensais à
-              toi bien avant ton anniversaire.
+            <div className="grid gap-6 md:grid-cols-4">
+              <div className="relative">
+                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-teal-500 text-xl font-bold text-white">
+                  1
+                </div>
+                <h3 className="mb-2 font-semibold text-zinc-800 dark:text-zinc-100">
+                  Tu réponds
+                </h3>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                  Clique sur "Répondre maintenant" et envoie-moi tes 9 réponses
+                </p>
+              </div>
+
+              <div className="relative">
+                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-teal-500 text-xl font-bold text-white">
+                  2
+                </div>
+                <h3 className="mb-2 font-semibold text-zinc-800 dark:text-zinc-100">
+                  J'analyse
+                </h3>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                  Je regarde où sont les plus gros gaps et opportunités
+                </p>
+              </div>
+
+              <div className="relative">
+                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-teal-500 text-xl font-bold text-white">
+                  3
+                </div>
+                <h3 className="mb-2 font-semibold text-zinc-800 dark:text-zinc-100">
+                  Je planifie
+                </h3>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                  Plan d'action concret avec ordre de priorité
+                </p>
+              </div>
+
+              <div className="relative">
+                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-teal-500 text-xl font-bold text-white">
+                  4
+                </div>
+                <h3 className="mb-2 font-semibold text-zinc-800 dark:text-zinc-100">
+                  J'exécute
+                </h3>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                  Je teste, j'optimise, je construis ton infrastructure
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Section 6: Finale */}
+          <div className="mt-12 space-y-4 text-center">
+            <p className="text-lg text-zinc-800 dark:text-zinc-100">
+              T'as le talent. T'as les livres. T'as maintenant l'espace pour
+              écrire.
+            </p>
+            <p className="text-lg text-zinc-800 dark:text-zinc-100">
+              Ce qui te manque, c'est quelqu'un qui s'occupe du business pendant
+              que tu fais ce que tu fais de mieux.
+            </p>
+            <p className="text-xl font-medium text-zinc-900 dark:text-zinc-50">
+              Alors voilà. C'est moi.
             </p>
 
-            <p className="mt-4">La preuve ? J'ai acheté ce nom de domaine.</p>
-
-            <p className="mt-4">
-              Pas pour me faire pardonner (enfin, peut-être un peu), mais
-              surtout parce que depuis notre discussion où tu m'as parlé de ta
-              lassitude avec la chiro et de ton envie de vraiment passer à autre
-              chose, de faire de l'écriture ton truc principal... ça m'a pas
-              lâché.
-            </p>
-
-            <p className="mt-4">
-              Maintenant que t'as ta maison, ton espace pour écrire
-              sérieusement, t'as plus besoin de juste "écrire sur le côté". T'as
-              besoin d'une stratégie qui va avec. Et du support qui va avec.
-            </p>
-
-            <p className="mt-4">Alors voilà le deal que je te propose.</p>
-
-            <h2 className="mt-10 text-2xl font-bold text-zinc-800 dark:text-zinc-100">
-              Ce que je veux faire (et pourquoi)
-            </h2>
-
-            <p className="mt-6">
-              Toi, tu écris. Moi, je m'occupe de vendre tes livres.
-            </p>
-
-            <p className="mt-4">
-              Pas parce que je suis charitable (quoique, t'es ma sœur). Mais
-              parce que je crois sincèrement que tu peux devenir une écrivaine
-              reconnue. Et que pour ça, il faut pas juste écrire des bons
-              bouquins — il faut que les gens les trouvent.
-            </p>
-
-            <p className="mt-4">
-              Et ça, la distribution, le marketing, la stratégie Amazon, les
-              communautés de lecteurs, toute cette mécanique... c'est pas ton
-              job. C'est le mien.
-            </p>
-
-            <p className="mt-4">
-              Dans mon temps libre, je vais tester des trucs, optimiser ta
-              présence, construire ton infrastructure de vente. Tu gardes le
-              contrôle créatif total, évidemment. Mais tout ce qui est "faire en
-              sorte que les lecteurs découvrent tes livres"? Je prends.
-            </p>
-
-            <p className="mt-4">
-              Mais pour pouvoir t'aider efficacement, j'ai besoin de savoir
-              exactement où t'en es.
-            </p>
-
-            <h2 className="mt-10 text-2xl font-bold text-zinc-800 dark:text-zinc-100">
-              Les questions (réponds-moi honnêtement, y'a pas de mauvaises
-              réponses)
-            </h2>
-
-            <div className="mt-6">
-              <p className="mt-6 font-semibold text-zinc-800 dark:text-zinc-100">
-                Sur Amazon et la visibilité :
-              </p>
-
-              <ol className="mt-4 list-inside list-decimal space-y-4">
-                <li className="text-zinc-600 dark:text-zinc-400">
-                  As-tu optimisé tes métadonnées Amazon ? (les mots-clés, les
-                  catégories, tout ce bordel technique qui fait que l'algorithme
-                  montre ton livre aux bonnes personnes)
-                </li>
-                <li className="text-zinc-600 dark:text-zinc-400">
-                  C'est quoi tes stats mensuelles sur KDP ? (pages lues par
-                  mois, ventes, ce genre de trucs — j'ai besoin de voir la
-                  baseline)
-                </li>
-                <li className="text-zinc-600 dark:text-zinc-400">
-                  Est-ce que tu fais de la pub Amazon ? Si oui, quel budget par
-                  mois et c'est quoi ton ACOS (coût publicitaire par vente) ?
-                </li>
-              </ol>
-
-              <p className="mt-8 font-semibold text-zinc-800 dark:text-zinc-100">
-                Sur ta relation avec tes lecteurs :
-              </p>
-
-              <ol className="mt-4 list-inside list-decimal space-y-4" start={4}>
-                <li className="text-zinc-600 dark:text-zinc-400">
-                  As-tu une liste email ? Si oui, combien d'abonnés ? (C'est THE
-                  asset qui change tout, si tu l'as pas, c'est priorité numéro
-                  un)
-                </li>
-                <li className="text-zinc-600 dark:text-zinc-400">
-                  Combien d'avis as-tu par livre sur Amazon ? (Le nombre exact
-                  pour Chronique des Premiers Hommes tome 1, 2, 3...)
-                </li>
-                <li className="text-zinc-600 dark:text-zinc-400">
-                  As-tu une équipe ARC (des lecteurs qui reçoivent ton livre en
-                  avance et laissent des avis au lancement) ?
-                </li>
-              </ol>
-
-              <p className="mt-8 font-semibold text-zinc-800 dark:text-zinc-100">
-                Sur la qualité et le produit :
-              </p>
-
-              <ol className="mt-4 list-inside list-decimal space-y-4" start={7}>
-                <li className="text-zinc-600 dark:text-zinc-400">
-                  Tes livres ont été beta-lus ou édités professionnellement ?
-                  (Je veux savoir si le produit est solide ou s'il y a des
-                  ajustements à faire)
-                </li>
-                <li className="text-zinc-600 dark:text-zinc-400">
-                  Es-tu satisfaite de tes couvertures actuelles ? (Parce que ça
-                  compte BEAUCOUP pour les clics)
-                </li>
-              </ol>
-
-              <p className="mt-8 font-semibold text-zinc-800 dark:text-zinc-100">
-                Sur la suite :
-              </p>
-
-              <ol className="mt-4 list-inside list-decimal space-y-4" start={9}>
-                <li className="text-zinc-600 dark:text-zinc-400">
-                  C'est quoi ton plan d'écriture ? (Prochain livre prévu quand ?
-                  Tu veux sortir combien de livres dans les 12-24 prochains mois
-                  ?)
-                </li>
-              </ol>
+            <div className="pt-6">
+              <EmailButton />
             </div>
 
-            <h2 className="mt-10 text-2xl font-bold text-zinc-800 dark:text-zinc-100">
-              Ce qui se passe ensuite
-            </h2>
-
-            <p className="mt-6">
-              Tu me réponds à ces questions (tranquille, prends ton temps, mais
-              réponds quand même).
-            </p>
-
-            <p className="mt-4">
-              À partir de tes réponses, je te monte un plan d'action concret.
-              Pas des idées vagues, des trucs actionnables avec un ordre de
-              priorité.
-            </p>
-
-            <p className="mt-4">
-              Et ensuite, je teste et j'exécute. Toi, tu te concentres sur
-              écrire la suite de la saga et devenir encore meilleure dans ton
-              craft. Moi, je fais en sorte que le monde découvre ce que tu
-              crées.
-            </p>
-
-            <h2 className="mt-10 text-2xl font-bold text-zinc-800 dark:text-zinc-100">
-              Pour finir
-            </h2>
-
-            <p className="mt-6">
-              T'as le talent. T'as les livres. T'as maintenant la maison et
-              l'espace pour écrire sérieusement.
-            </p>
-
-            <p className="mt-4">
-              Ce qui te manque, c'est juste quelqu'un qui s'occupe de la partie
-              business pendant que tu fais ce que tu fais de mieux.
-            </p>
-
-            <p className="mt-4">
-              Alors voilà, c'est moi. Et ce site, c'est le début.
-            </p>
-
-            <p className="mt-4">
-              Bienvenue sur alexandralisabeth.com — ton futur QG d'écrivaine
-              reconnue.
-            </p>
-
-            <p className="mt-4">
-              Maintenant, réponds-moi à ces questions et on y va. 🚀
-            </p>
-
-            <p className="mt-6 font-semibold text-zinc-800 dark:text-zinc-100">
-              — Ton frère qui oublie les dates mais pas les projets importants
+            <p className="pt-8 font-semibold italic text-zinc-700 dark:text-zinc-300">
+              — Ton frère qui rate les dates mais tient ses promesses
             </p>
           </div>
         </div>
-      </Container>
-    </>
+      </div>
+    </Container>
   )
 }

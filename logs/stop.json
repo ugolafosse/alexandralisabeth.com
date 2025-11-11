@@ -22,5 +22,21 @@
     "permission_mode": "default",
     "hook_event_name": "Stop",
     "stop_hook_active": false
+  },
+  {
+    "session_id": "90d19318-369e-4118-b069-7c66119cde7a",
+    "transcript_path": "/Users/ugo/.claude/projects/-Users-ugo-dev-alexandralisabeth-com/90d19318-369e-4118-b069-7c66119cde7a.jsonl",
+    "cwd": "/Users/ugo/dev/alexandralisabeth.com",
+    "permission_mode": "default",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
+  },
+  {
+    "session_id": "22668cbd-6c68-4b80-8e8e-aea933120bd6",
+    "transcript_path": "/Users/ugo/.claude/projects/-Users-ugo-dev-alexandralisabeth-com/22668cbd-6c68-4b80-8e8e-aea933120bd6.jsonl",
+    "cwd": "/Users/ugo/dev/alexandralisabeth.com",
+    "permission_mode": "default",
+    "hook_event_name": "Stop",
+    "stop_hook_active": false
   }
 ]
