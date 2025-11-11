@@ -48,9 +48,9 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'À propos',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'Alexandra Lisabeth, Autrice de la série "Chronique des Premiers Hommes".',
 }
 
 export default function About() {
@@ -61,7 +61,7 @@ export default function About() {
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
               src={portraitImage}
-              alt=""
+              alt="Alexandra Lisabeth"
               sizes="(min-width: 1024px) 32rem, 20rem"
               className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
             />
@@ -69,58 +69,73 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
+            Je suis Alexandra Lisabeth, autrice de la série "Chronique des
+            Premiers Hommes"
           </h1>
+
+          <Link
+            href="/letter"
+            className="mb-8 inline-flex items-center gap-2 rounded-full bg-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-teal-500 dark:bg-teal-500 dark:hover:bg-teal-400"
+          >
+            📩 Lire la lettre du frerot !
+          </Link>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              Je crée des mondes où la magie est aussi sauvage que la nature qui
+              l'entoure, où l'équilibre entre le bien et le mal n'est jamais
+              garanti, et où chaque âme porte le poids de son destin. Avec la
+              série <em>Chronique des Premiers Hommes</em>, je vous invite dans
+              une époque primordiale où la survie, la chasse et la spiritualité
+              définissent l'existence même de l'humanité.
             </p>
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              Mon parcours est un peu atypique : j'ai commencé ma carrière comme
+              chiropracteure, passant mes journées à comprendre les mystères du
+              corps humain. Mais les histoires qui tournaient dans ma tête — ces
+              univers de magie primitive, de destins entrelacés, d'équilibres
+              fragiles — ont fini par réclamer toute mon attention. Aujourd'hui,
+              je me consacre entièrement à l'écriture de mondes où chaque
+              génération possède ses élus, où les Âmes Blanches et Noires
+              maintiennent un ordre millénaire... jusqu'à ce que cet ordre soit
+              brisé.
             </p>
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              Ce qui me fascine dans la fantasy épique ? L'opportunité de
+              construire des systèmes de magie enracinés dans la nature même du
+              monde, des cultures spirituelles qui respirent, des conflits qui
+              dépassent le simple bien contre mal. Dans mes histoires, la magie
+              a des règles, les âmes ont un but, et chaque choix peut bouleverser
+              l'équilibre du monde entier.
             </p>
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              Quand je n'écris pas sur mes Premiers Hommes, vous me trouverez
+              probablement en train de cartographier les territoires sauvages de
+              mon univers, de développer les mythologies de ses peuples, ou de
+              tisser les fils invisibles qui relient mes personnages à travers
+              les générations. Mon ambition ? Créer une saga qui résonne avec
+              cette vérité : nous sommes tous connectés à quelque chose de plus
+              grand que nous.
             </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={XIcon}>
-              Follow on X
-            </SocialLink>
             <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-              Follow on Instagram
+              Suivez moi sur Instagram
             </SocialLink>
-            <SocialLink href="#" icon={GitHubIcon} className="mt-4">
-              Follow on GitHub
-            </SocialLink>
+            {/* <SocialLink href="#" icon={XIcon}> */}
+            {/*   Suivez mon avancement on X */}
+            {/* </SocialLink> */}
+            {/* </SocialLink> */}
             <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
-              Follow on LinkedIn
+              Suivez moi sur LinkedIn
             </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
+              href="mailto:aelafosse@gmail.com"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              spencer@planetaria.tech
+              aelafosse@gmail.com
             </SocialLink>
           </ul>
         </div>
