@@ -161,7 +161,7 @@ export default function Letter() {
 
           <div className="not-prose mt-8 text-center">
             <a
-              href={`mailto:aelafosse@gmail.com?subject=${encodeURIComponent('Réponses à tes questions')}&body=${encodeURIComponent(`Salut !
+              href={`mailto:ugo.lafosse@gmail.com?subject=${encodeURIComponent('Réponses à tes questions')}&body=${encodeURIComponent(`Salut !
 
 Voici mes réponses à tes 8 questions :
 
