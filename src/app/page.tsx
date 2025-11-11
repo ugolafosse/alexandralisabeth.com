@@ -2,8 +2,11 @@ import { type Metadata } from 'next'
 import Link from 'next/link'
 
 import { Banner } from '@/components/Banner'
+import { AuthorBanner } from '@/components/AuthorBanner'
+import { AuthorCTA } from '@/components/AuthorCTA'
 import { Container } from '@/components/Container'
 import { HeroImage } from '@/components/HeroImage'
+import { Testimonials } from '@/components/Testimonials'
 import coverImage from '@/images/cover-chronique-vol1.jpg'
 
 export const metadata: Metadata = {
@@ -39,6 +42,7 @@ export default function Home() {
   return (
     <>
       <Banner />
+      <AuthorBanner />
       {/* Hero Section */}
       <section
         aria-label="Hero"
@@ -55,24 +59,36 @@ export default function Home() {
                 Premiers Hommes
               </span>
             </h1>
-            <p className="mt-4 font-display text-3xl font-light text-zinc-600 italic dark:text-zinc-400">
+            <p className="mt-4 font-display text-3xl font-light italic text-zinc-700 dark:text-zinc-300">
               Tome 1 : L&apos;Éveil des Âmes
             </p>
-            <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
-              Dans un monde où la magie est aussi sauvage que la nature qui
-              l&apos;entoure, où l&apos;équilibre entre le bien et le mal
-              n&apos;est jamais garanti, découvrez une époque primordiale où
-              chaque âme porte le poids de son destin.
+            {/* <p className="mt-6 text-xl leading-relaxed font-medium text-zinc-800 dark:text-zinc-100"> */}
+            {/*   Le loup vous fixe. Vous devez prendre sa vie. Un ami */}
+            {/* </p> */}
+            <p className="mt-4 text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
+              De mémoire de plus anciens sages de clans, la forêt primordiale et
+              sa nature sauvage a toujours coexisté en harmonie avec eux. Ce
+              lien établi avant l arrivee des premiers hommes, est sur le point
+              de se briser.
             </p>
 
             {/* CTAs */}
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link
-                href="/about"
-                aria-label="Découvrir l'univers de la saga"
-                className="group inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#f0bb48] px-6 py-3 text-base font-semibold text-zinc-900 shadow-md transition-all duration-200 hover:scale-105 hover:bg-[#e5ad35] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-[#f0bb48] focus-visible:ring-offset-2 focus-visible:outline-none motion-safe:transition-all dark:bg-[#f0bb48] dark:text-zinc-900 dark:hover:bg-[#e5ad35]"
+                href="/prologue"
+                aria-label="Lire le prologue gratuitement"
+                className="group inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#f0bb48] px-6 py-3 text-base font-semibold text-zinc-900 shadow-lg shadow-[#f0bb48]/30 transition-all duration-200 hover:scale-105 hover:bg-[#e5ad35] hover:shadow-xl hover:shadow-[#f0bb48]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f0bb48] focus-visible:ring-offset-2 motion-safe:transition-all dark:bg-[#f0bb48] dark:text-zinc-900 dark:shadow-[#f0bb48]/50 dark:hover:bg-[#e5ad35] dark:hover:shadow-[#f0bb48]/60"
               >
-                Découvrir l&apos;univers
+                Lire le prologue gratuitement
+              </Link>
+              <Link
+                href="https://www.amazon.fr/Chroniques-Premiers-Hommes-L%C3%89veil-Chronique-ebook/dp/B07L8HCQPJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Commander sur Amazon"
+                className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full border-2 border-zinc-300 px-6 py-3 text-base font-semibold text-zinc-900 transition-all duration-200 hover:border-zinc-400 hover:bg-zinc-50 focus-visible:ring-2 focus-visible:ring-zinc-300 focus-visible:ring-offset-2 focus-visible:outline-none dark:border-zinc-700 dark:text-zinc-100 dark:hover:border-zinc-600 dark:hover:bg-zinc-800/50"
+              >
+                Commander sur Amazon
               </Link>
             </div>
           </div>
@@ -120,52 +136,74 @@ export default function Home() {
       <Container className="mt-24 sm:mt-32" role="main">
         <article className="mx-auto max-w-3xl">
           {/* Book Description */}
-          <header className="text-center">
-            <h2 className="font-display text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
-              Une saga de fantasy épique
-            </h2>
-            <p className="mt-6 text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
-              Plongez dans une époque primordiale où la survie, la chasse et la
-              spiritualité définissent l&apos;existence même de l&apos;humanité.
-              Une saga où la magie a des règles, les âmes ont un but, et chaque
-              choix peut bouleverser l&apos;équilibre du monde entier.
-            </p>
-          </header>
+          {/* <header className="text-center"> */}
+          {/*   <h2 className="font-display text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100"> */}
+          {/*     Une saga de fantasy épique */}
+          {/*   </h2> */}
+          {/*   <p className="mt-6 text-lg leading-relaxed text-zinc-600 dark:text-zinc-400"> */}
+          {/*     Les clans des premiers hommes vive au coeur de la forêt */}
+          {/*     primordiale. à perte de vue, la nature sauvage co-existe en */}
+          {/*     harmonie avec eux, dans un lien etablit aux commencement du */}
+          {/*     monde... cet équilibre millénaire est sur le point de se briser. */}
+          {/*   </p> */}
+          {/* </header> */}
 
           {/* Key Themes */}
-          <section aria-label="Key Themes" className="mt-16 space-y-8">
-            <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-              <h3 className="font-display text-xl font-semibold text-zinc-800 dark:text-zinc-100">
-                Magie primitive et équilibre ancestral
-              </h3>
-              <p className="mt-2 text-base text-zinc-600 dark:text-zinc-400">
-                Un système de magie enraciné dans la nature même du monde, où
-                l&apos;équilibre entre les forces est fragile et constamment
-                menacé.
-              </p>
-            </div>
+          {/* <section aria-label="Key Themes" className="mt-16 space-y-8"> */}
+          {/*   <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"> */}
+          {/*     <h3 className="font-display text-xl font-semibold text-zinc-800 dark:text-zinc-100"> */}
+          {/*       Magie primitive et équilibre ancestral */}
+          {/*     </h3> */}
+          {/*     <p className="mt-2 text-base text-zinc-600 dark:text-zinc-400"> */}
+          {/*       Un système de magie enraciné dans la nature même du monde, où */}
+          {/*       l&apos;équilibre entre les forces est fragile et constamment */}
+          {/*       menacé. */}
+          {/*     </p> */}
+          {/*   </div> */}
 
-            <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-              <h3 className="font-display text-xl font-semibold text-zinc-800 dark:text-zinc-100">
-                Âmes Blanches et Noires
-              </h3>
-              <p className="mt-2 text-base text-zinc-600 dark:text-zinc-400">
-                Chaque génération possède ses élus, porteurs d&apos;âmes
-                spéciales qui maintiennent un ordre millénaire... jusqu&apos;à
-                ce que cet ordre soit brisé.
-              </p>
-            </div>
+          {/*   <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"> */}
+          {/*     <h3 className="font-display text-xl font-semibold text-zinc-800 dark:text-zinc-100"> */}
+          {/*       Âmes Blanches et Noires */}
+          {/*     </h3> */}
+          {/*     <p className="mt-2 text-base text-zinc-600 dark:text-zinc-400"> */}
+          {/*       Chaque génération possède ses élus, porteurs d&apos;âmes */}
+          {/*       spéciales qui maintiennent un ordre millénaire... jusqu&apos;à */}
+          {/*       ce que cet ordre soit brisé. */}
+          {/*     </p> */}
+          {/*   </div> */}
 
-            <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-              <h3 className="font-display text-xl font-semibold text-zinc-800 dark:text-zinc-100">
-                Destins entrelacés à travers les générations
-              </h3>
-              <p className="mt-2 text-base text-zinc-600 dark:text-zinc-400">
-                Des personnages dont les vies sont tissées ensemble par des fils
-                invisibles, connectés à quelque chose de plus grand qu&apos;eux.
-              </p>
-            </div>
-          </section>
+          {/*   <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"> */}
+          {/*     <h3 className="font-display text-xl font-semibold text-zinc-800 dark:text-zinc-100"> */}
+          {/*       Destins entrelacés à travers les générations */}
+          {/*     </h3> */}
+          {/*     <p className="mt-2 text-base text-zinc-600 dark:text-zinc-400"> */}
+          {/*       Des personnages dont les vies sont tissées ensemble par des fils */}
+          {/*       invisibles, connectés à quelque chose de plus grand qu&apos;eux. */}
+          {/*     </p> */}
+          {/*   </div> */}
+          {/* </section> */}
+
+          {/* Testimonials */}
+          <Testimonials
+            testimonials={[
+              {
+                content:
+                  "Impossible de le lâcher. Ce livre est une perle, totalement immersif... Seul bémol, on n'en a pas assez et l'attente d'une suite est éprouvante. Un conseil, réservez votre week-end !",
+              },
+              {
+                content:
+                  "Le genre d'ouvrage qui vous prend dans sa danse et que l'on ne veut surtout pas quitter! Les descriptions vous envoûtent tant que l'on ne sait plus si l'on est dans la lecture ou devant un écran!",
+              },
+              {
+                content:
+                  "Ce que nous appelons 'fiction' devient au travers de son écriture une réalité presque tangible. Il se lit comme on regarde un film qui nous emporte.",
+              },
+            ]}
+            amazonUrl="https://www.amazon.fr/Chroniques-Premiers-Hommes-L%C3%89veil-Chronique-ebook/dp/B07L8HCQPJ#customerReviews"
+          />
+
+          {/* Author CTA */}
+          <AuthorCTA />
         </article>
       </Container>
     </>

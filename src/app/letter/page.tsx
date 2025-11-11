@@ -6,40 +6,37 @@ export default function Letter() {
     <Container className="mt-16 sm:mt-32">
       <div className="max-w-2xl">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-          Bienvenue sur ton site d'écrivaine !
+          Bienvenue sur <strong>alexandralisabeth.com</strong> — ton futur QG
+          d'écrivaine célèbre. 😉
         </h1>
 
         <div className="prose-zinc prose mt-8 dark:prose-invert">
           <p>
-            Bienvenue sur <strong>alexandralisabeth.com</strong> — ton futur QG
-            d'écrivaine célebre.😉
-          </p>
-
-          <p>
             Bon, déjà : <strong>joyeux anniversaire en retard</strong>. Je sais,
             je sais. Les dates et moi, c'est compliqué. Mais cette fois, ça me
             fait vraiment chier parce que c'est toi, et que justement, je
-            pensais à ca bien avant ton anniversaire.
+            pensais à ça bien avant ton anniversaire.
           </p>
 
           <p>
-            Depuis le temps qu'on en parle — toi, moi, Suzy — qu'il faudrait
-            "marketer tes livres serieusment", augmenter ton audiance autour de
-            ton ecriture, tout ça...
+            Depuis le temps qu'on en parle — Suzy, Toi, tout le monde — qu'il
+            faudrait "marketer tes livres sérieusement", augmenter ton audience
+            autour de ton écriture. Je prends le truc en route et tu as sûrement
+            beaucoup de choses en cours de ce côté-là. Dans tous les cas...
           </p>
 
           <p>
             <strong>
               J'ai acheté ce domaine et codé ce site vitrine comme point de
-              depart.
+              départ.
             </strong>
           </p>
 
           <p>
-            Pas pour me faire pardonner d etre un frere absent (enfin, peut-être
+            Pas pour me faire pardonner d'être un frère absent (enfin, peut-être
             un peu), mais surtout parce que depuis que tu m'as parlé de ta
             lassitude avec la chiro et de ton envie de vraiment passer à autre
-            chose, avec l idee de faire de l'écriture ton principal...
+            chose, avec l'idée de faire de l'écriture ton principal...
           </p>
 
           <p>
@@ -63,26 +60,26 @@ export default function Letter() {
           <h2>Voilà ce que je propose :</h2>
 
           <p>
-            Mon cadeau, c'est simple : j'ai des idées. Ça fait un moment que j'y
-            pense. Des technique concretes pour vendre tes livres, des tests à
-            faire pour te faire connaitre comme autrice.
+            Mon cadeau, c'est simple : j'ai des idées. Des techniques concrètes
+            pour vendre tes livres, des tests à faire pour te faire connaître
+            comme autrice.
           </p>
 
           <p>
-            C-est pas un scoop je suis deborde, mais souvent dans mon temps
-            libre ou pour me changer les idees, j!ai envie de tester des trucs.
-            Donc si je pense à une idee marketing que je connais, je la teste,
+            C'est pas un scoop je suis débordé, mais souvent dans mon temps
+            libre ou pour me changer les idées, j'ai envie de tester des trucs.
+            Donc si je pense à une idée marketing que je connais, je la teste,
             et on voit ce qui marche.
           </p>
 
           <p>
-            C'est pas un sprint, c'est un marathon. Mais il faut bien commencer
-            à courir a un moment.
+            Clairement c'est pas un sprint, c'est un marathon. Mais il faut bien
+            commencer à courir à un moment.
           </p>
 
           <h2>
-            Pour pouvoir commencer efficacement, j'ai besoin de savoir où t'en
-            es.
+            Si ça te dit, et pour pouvoir commencer efficacement, j'ai besoin de
+            savoir où t'en es.
           </h2>
 
           <p>
@@ -91,7 +88,7 @@ export default function Letter() {
           <ol>
             <li>
               <strong>As-tu optimisé tes métadonnées Amazon ?</strong> (les
-              mots-clés, les catégories, tout ce qu il faut pour que
+              mots-clés, les catégories, tout ce qu'il faut pour que
               l'algorithme montre ton livre aux bonnes personnes)
             </li>
             <li>
@@ -145,8 +142,7 @@ export default function Letter() {
           <h2>Ce qui se passe ensuite</h2>
 
           <p>
-            À partir de tes réponses,{' '}
-            <strong>je monte un plan d'action concret.</strong>
+            À partir de tes réponses, <strong>je me débrouille.</strong>
           </p>
 
           <p>

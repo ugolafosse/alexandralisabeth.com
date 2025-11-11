@@ -1,9 +1,9 @@
 import { type Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
+import { PortraitImage } from '@/components/PortraitImage'
 import {
   GitHubIcon,
   InstagramIcon,
@@ -27,9 +27,9 @@ function SocialLink({
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-[#f0bb48] dark:text-zinc-200 dark:hover:text-[#f0bb48]"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-[#f0bb48]" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -59,11 +59,11 @@ export default function About() {
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
         <div className="lg:pl-20">
           <div className="max-w-xs px-2.5 lg:max-w-none">
-            <Image
+            <PortraitImage
               src={portraitImage}
               alt="Alexandra Lisabeth"
               sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover shadow-lg shadow-zinc-900/10 dark:bg-zinc-800 dark:shadow-zinc-900/50"
             />
           </div>
         </div>
@@ -118,10 +118,6 @@ export default function About() {
             <SocialLink href="#" icon={InstagramIcon} className="mt-4">
               Suivez moi sur Instagram
             </SocialLink>
-            {/* <SocialLink href="#" icon={XIcon}> */}
-            {/*   Suivez mon avancement on X */}
-            {/* </SocialLink> */}
-            {/* </SocialLink> */}
             <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
               Suivez moi sur LinkedIn
             </SocialLink>

@@ -40,7 +40,7 @@ export function Banner() {
           href="/letter"
           className="font-semibold transition hover:text-zinc-700"
         >
-          🎉 Joyeux anniversaire !
+          🎉 JOYEUX ANNIVERSAIRE !
           <svg
             viewBox="0 0 2 2"
             aria-hidden="true"
