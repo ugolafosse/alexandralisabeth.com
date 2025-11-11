@@ -49,26 +49,23 @@ Alexandra`
   return (
     <a
       href={`mailto:aelafosse@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`}
-      className={`inline-flex items-center gap-2 rounded-full bg-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-teal-500 dark:bg-teal-500 dark:hover:bg-teal-400 ${className}`}
+      className={`inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-lg ring-1 ring-teal-600/20 transition hover:bg-teal-500 hover:shadow-xl dark:bg-teal-500 dark:hover:bg-teal-400 ${className}`}
     >
-      📩 Répondre maintenant
+      Répondre maintenant
     </a>
   )
 }
 
 function QuestionCard({
   title,
-  icon,
   questions,
 }: {
   title: string
-  icon: string
   questions: { q: string; detail?: string }[]
 }) {
   return (
-    <div className="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-800/50">
-      <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-zinc-800 dark:text-zinc-100">
-        <span className="text-2xl">{icon}</span>
+    <div className="rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:shadow-md dark:border-zinc-700 dark:bg-zinc-800/50">
+      <h3 className="mb-4 text-lg font-semibold text-zinc-800 dark:text-zinc-100">
         {title}
       </h3>
       <ol className="space-y-3">
@@ -97,7 +94,7 @@ export default function Letter() {
       {/* Hero */}
       <div className="max-w-2xl">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-          🎂 Joyeux anniversaire
+          Joyeux anniversaire
         </h1>
         <div className="mt-6">
           <EmailButton />
@@ -130,9 +127,9 @@ export default function Letter() {
           </div>
 
           {/* Section 2: Le deal */}
-          <div className="mt-12 space-y-4 rounded-2xl border-l-4 border-teal-500 bg-zinc-50 p-6 dark:bg-zinc-800/50">
-            <h2 className="flex items-center gap-2 text-2xl font-bold text-zinc-800 dark:text-zinc-100">
-              <span>🎯</span> Le deal
+          <div className="mt-12 space-y-4 rounded-xl border-l-4 border-teal-500 bg-zinc-50 p-6 shadow-sm dark:bg-zinc-800/50">
+            <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100">
+              Le deal
             </h2>
             <p className="text-lg font-medium text-zinc-800 dark:text-zinc-100">
               Toi, tu écris. Moi, je vends tes livres.
@@ -190,8 +187,8 @@ export default function Letter() {
 
           {/* Section 4: Les questions */}
           <div className="mt-12">
-            <h2 className="mb-6 flex items-center gap-2 text-2xl font-bold text-zinc-800 dark:text-zinc-100">
-              <span>📋</span> Les 9 questions
+            <h2 className="mb-6 text-2xl font-bold text-zinc-800 dark:text-zinc-100">
+              Les 9 questions
             </h2>
             <p className="mb-8 text-zinc-600 dark:text-zinc-400">
               Pour te construire un plan d'action sur mesure, j'ai besoin de
@@ -200,7 +197,6 @@ export default function Letter() {
 
             <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
               <QuestionCard
-                icon="🔍"
                 title="Amazon & Visibilité"
                 questions={[
                   {
@@ -215,7 +211,6 @@ export default function Letter() {
                 ]}
               />
               <QuestionCard
-                icon="💬"
                 title="Relation lecteurs"
                 questions={[
                   { q: 'Liste email ?', detail: '(nombre d\'abonnés)' },
@@ -224,7 +219,6 @@ export default function Letter() {
                 ]}
               />
               <QuestionCard
-                icon="✨"
                 title="Qualité & Suite"
                 questions={[
                   { q: 'Beta-lecture / Édition pro ?' },
@@ -236,9 +230,9 @@ export default function Letter() {
           </div>
 
           {/* Section 5: Timeline */}
-          <div className="mt-12 rounded-2xl bg-gradient-to-br from-teal-50 to-zinc-50 p-8 dark:from-zinc-800/50 dark:to-zinc-900/50">
-            <h2 className="mb-8 flex items-center gap-2 text-2xl font-bold text-zinc-800 dark:text-zinc-100">
-              <span>🚀</span> Ce qui se passe ensuite
+          <div className="mt-12 rounded-xl bg-gradient-to-br from-teal-50 to-zinc-50 p-8 shadow-sm dark:from-zinc-800/50 dark:to-zinc-900/50">
+            <h2 className="mb-8 text-2xl font-bold text-zinc-800 dark:text-zinc-100">
+              Ce qui se passe ensuite
             </h2>
 
             <div className="grid gap-6 md:grid-cols-4">
