@@ -77,7 +77,7 @@ export default function Home() {
               <Link
                 href="/prologue"
                 aria-label="Lire le prologue gratuitement"
-                className="group inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#f0bb48] px-6 py-3 text-base font-semibold text-zinc-900 shadow-lg shadow-[#f0bb48]/30 transition-all duration-200 hover:scale-105 hover:bg-[#e5ad35] hover:shadow-xl hover:shadow-[#f0bb48]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f0bb48] focus-visible:ring-offset-2 motion-safe:transition-all dark:bg-[#f0bb48] dark:text-zinc-900 dark:shadow-[#f0bb48]/50 dark:hover:bg-[#e5ad35] dark:hover:shadow-[#f0bb48]/60"
+                className="group inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#f0bb48] px-6 py-3 text-base font-semibold text-zinc-900 transition-all duration-200 hover:scale-105 hover:bg-[#e5ad35] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f0bb48] focus-visible:ring-offset-2 motion-safe:transition-all dark:bg-[#f0bb48] dark:text-zinc-900 dark:hover:bg-[#e5ad35]"
               >
                 Lire le prologue gratuitement
               </Link>
