@@ -214,7 +214,7 @@ export default function Letter() {
               Ce qui se passe ensuite
             </h2>
 
-            <div className="grid gap-6 md:grid-cols-4">
+            <div className="grid gap-6 md:grid-cols-3">
               <div className="relative">
                 <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-teal-500 text-xl font-bold text-white">
                   1
@@ -253,18 +253,12 @@ export default function Letter() {
             </div>
           </div>
 
-          {/* Section 6: Finale */}
+          {/* Section 5: Finale */}
           <div className="mt-12 space-y-4 text-center">
             <p className="text-lg text-zinc-800 dark:text-zinc-100">
-              T'as le talent. T'as les livres. T'as maintenant l'espace pour
-              écrire.
-            </p>
-            <p className="text-lg text-zinc-800 dark:text-zinc-100">
-              Ce qui te manque, c'est quelqu'un qui s'occupe du business pendant
-              que tu fais ce que tu fais de mieux.
-            </p>
-            <p className="text-xl font-medium text-zinc-900 dark:text-zinc-50">
-              Alors voilà. C'est moi.
+              Toi, tu te concentres sur écrire la suite de la saga et prendre
+              ton pied. Moi, je teste des choses pour faire en sorte que le
+              monde découvre ce que tu écris.
             </p>
 
             <div className="pt-6">
@@ -272,7 +266,7 @@ export default function Letter() {
             </div>
 
             <p className="pt-8 font-semibold italic text-zinc-700 dark:text-zinc-300">
-              — Ton frère qui rate les dates mais tient ses promesses
+              — Ton frère qui oublie les dates mais pas le plus important
             </p>
           </div>
         </div>
