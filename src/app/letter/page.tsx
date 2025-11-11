@@ -48,8 +48,7 @@ export default function Letter() {
           <p>Le problème avec l'autoédition ? C'est deux jobs en un :</p>
           <ul>
             <li>
-              <strong>Job 1</strong> : Écrire des bons livres (c'est ton truc,
-              ce que t'aimes faire)
+              <strong>Job 1</strong> : Écrire des bons livres.
             </li>
             <li>
               <strong>Job 2</strong> : Marketing, distribution, Amazon, tout ce
@@ -60,7 +59,7 @@ export default function Letter() {
           <h2>Voilà ce que je propose :</h2>
 
           <p>
-            Mon cadeau, c'est simple : j'ai des idées. Des techniques concrètes
+            Mon cadeau, c'est simple : j'ai des idées. Des techniques a essayer
             pour vendre tes livres, des tests à faire pour te faire connaître
             comme autrice.
           </p>
@@ -78,7 +77,7 @@ export default function Letter() {
           </p>
 
           <h2>
-            Si ça te dit, et pour pouvoir commencer efficacement, j'ai besoin de
+            Si ça te dit, et pour pouvoir le faire efficacement, j'ai besoin de
             savoir où t'en es.
           </h2>
 
@@ -147,7 +146,7 @@ export default function Letter() {
 
           <p>
             Toi, tu te concentres sur écrire la suite de la saga et prendre ton
-            pied. Moi, je teste des choses pour faire en sorte que le monde
+            pied. Moi, je teste des choses pour faire en sorte que plus de gens
             découvre ce que tu écris.
           </p>
 
