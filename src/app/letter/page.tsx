@@ -159,7 +159,51 @@ export default function Letter() {
 
           <p>Maintenant, réponds-moi à ces questions et on y va. 🚀</p>
 
-          <p>— Ton frère qui oublie les dates mais pas le plus important 😘</p>
+          <div className="not-prose mt-8 text-center">
+            <a
+              href={`mailto:aelafosse@gmail.com?subject=${encodeURIComponent('Réponses à tes questions')}&body=${encodeURIComponent(`Salut !
+
+Voici mes réponses à tes 8 questions :
+
+**SUR AMAZON & VISIBILITÉ**
+
+1. Métadonnées Amazon optimisées (mots-clés, catégories) ?
+[Ta réponse]
+
+2. Stats mensuelles KDP (pages lues, ventes) ?
+[Ta réponse]
+
+3. Pub Amazon (budget, ACOS) ?
+[Ta réponse]
+
+**SUR TA RELATION AVEC TES LECTEURS**
+
+4. Liste email (nombre d'abonnés) ?
+[Ta réponse]
+
+5. Nombre d'avis par livre sur Amazon ?
+[Ta réponse]
+
+6. Équipe ARC en place ?
+[Ta réponse]
+
+7. Satisfaite de tes couvertures actuelles ?
+[Ta réponse]
+
+**SUR LA SUITE**
+
+8. Plan d'écriture (prochains livres, timing) ?
+[Ta réponse]
+
+—
+Alexandra`)}`}
+              className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-lg ring-1 ring-teal-600/20 transition hover:bg-teal-500 hover:shadow-xl dark:bg-teal-500 dark:hover:bg-teal-400"
+            >
+              Répondre maintenant
+            </a>
+          </div>
+
+          <p className="mt-8">— Ton frère qui oublie les dates mais pas le plus important 😘</p>
         </div>
       </div>
     </Container>
