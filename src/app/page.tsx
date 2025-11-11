@@ -1,40 +1,61 @@
 import { type Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 
+import { Banner } from '@/components/Banner'
 import { Container } from '@/components/Container'
+import { HeroImage } from '@/components/HeroImage'
 import coverImage from '@/images/cover-chronique-vol1.jpg'
 
 export const metadata: Metadata = {
   title: 'Alexandra Lisabeth - Chronique des Premiers Hommes',
   description:
-    'Découvrez Chronique des Premiers Hommes, une saga de fantasy épique où la magie primitive et le destin des âmes définissent l&apos;humanité.',
+    "Découvrez Chronique des Premiers Hommes, une saga de fantasy épique où la magie primitive et le destin des âmes définissent l'humanité.",
+  openGraph: {
+    title: "Chronique des Premiers Hommes - Tome 1 : L'Éveil des Âmes",
+    description:
+      "Plongez dans une époque primordiale où la survie, la chasse et la spiritualité définissent l'existence même de l'humanité.",
+    type: 'website',
+    locale: 'fr_FR',
+    siteName: 'Alexandra Lisabeth',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Chronique des Premiers Hommes - Couverture du Tome 1',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Chronique des Premiers Hommes - Tome 1 : L'Éveil des Âmes",
+    description:
+      "Une saga de fantasy épique où la magie primitive et le destin des âmes définissent l'humanité.",
+    images: ['/og-image.jpg'],
+  },
 }
 
 export default function Home() {
   return (
     <>
+      <Banner />
       {/* Hero Section */}
-      <div className="mt-16 flex min-h-[80vh] flex-col lg:flex-row">
-        {/* Book Cover - 40% width, full bleed */}
-        <div className="relative h-[50vh] w-full lg:h-auto lg:w-[40%]">
-          <Image
-            src={coverImage}
-            alt="Chronique des Premiers Hommes - Tome 1 : L'Éveil des Âmes"
-            className="h-full w-full object-cover"
-            priority
-            fill
-            sizes="(min-width: 1024px) 40vw, 100vw"
-          />
-        </div>
-
+      <section
+        aria-label="Hero"
+        className="relative flex min-h-[100svh] flex-col lg:min-h-screen lg:flex-row"
+      >
         {/* Content - 60% width */}
-        <Container className="flex flex-1 items-center lg:w-[60%]">
-          <div className="flex flex-col justify-center py-16 lg:py-0">
-            <h1 className="font-display text-5xl font-bold tracking-tight text-zinc-800 sm:text-6xl dark:text-zinc-100">
-              Chronique des Premiers Hommes
+        <div className="relative flex h-auto min-h-[50svh] w-full items-center justify-center px-6 py-12 lg:h-screen lg:w-[60%] lg:px-16 lg:py-0">
+          <div className="flex max-w-2xl flex-col justify-center">
+            <h1 className="font-display tracking-tight text-zinc-800 dark:text-zinc-100">
+              <span className="block text-4xl font-light sm:text-5xl md:text-5xl">
+                Chronique des
+              </span>
+              <span className="mt-1 block text-5xl font-bold uppercase sm:text-5xl md:text-6xl">
+                Premiers Hommes
+              </span>
             </h1>
-            <p className="mt-4 font-display text-2xl italic text-zinc-600 dark:text-zinc-400">
+            <p className="mt-4 font-display text-3xl font-light text-zinc-600 italic dark:text-zinc-400">
               Tome 1 : L&apos;Éveil des Âmes
             </p>
             <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
@@ -47,27 +68,59 @@ export default function Home() {
             {/* CTAs */}
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link
-                href="/letter"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-teal-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-teal-500 dark:bg-teal-500 dark:hover:bg-teal-400"
-              >
-                📩 Lire la lettre du frerot
-              </Link>
-              <Link
                 href="/about"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-zinc-100 px-6 py-3 text-base font-semibold text-zinc-900 shadow-md transition hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+                aria-label="Découvrir l'univers de la saga"
+                className="group inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-[#f0bb48] px-6 py-3 text-base font-semibold text-zinc-900 shadow-md transition-all duration-200 hover:scale-105 hover:bg-[#e5ad35] hover:shadow-lg focus-visible:ring-2 focus-visible:ring-[#f0bb48] focus-visible:ring-offset-2 focus-visible:outline-none motion-safe:transition-all dark:bg-[#f0bb48] dark:text-zinc-900 dark:hover:bg-[#e5ad35]"
               >
                 Découvrir l&apos;univers
               </Link>
             </div>
           </div>
-        </Container>
-      </div>
+        </div>
+        {/* Book Cover - 40% width, absolute full bleed with gradient fade */}
+        <div className="relative h-auto min-h-[50svh] w-full lg:h-screen lg:w-[40%]">
+          <HeroImage
+            src={coverImage}
+            alt="Chronique des Premiers Hommes - Tome 1 : L'Éveil des Âmes"
+            priority
+            sizes="(min-width: 1024px) 40vw, 100vw"
+          />
+          {/* Gradient overlays to blend wolf into darkness */}
+          {/* Left edge fade */}
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                'linear-gradient(to right, #060102 0%, rgba(6, 1, 2, 0.8) 3%, rgba(6, 1, 2, 0.4) 10%, transparent 20%)',
+            }}
+            aria-hidden="true"
+          />
+          {/* Top edge fade */}
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                'linear-gradient(to bottom, #060102 0%, rgba(6, 1, 2, 0.6) 5%, rgba(6, 1, 2, 0.3) 10%, transparent 18%)',
+            }}
+            aria-hidden="true"
+          />
+          {/* Bottom edge fade */}
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                'linear-gradient(to top, #060102 0%, rgba(6, 1, 2, 0.6) 5%, rgba(6, 1, 2, 0.3) 10%, transparent 18%)',
+            }}
+            aria-hidden="true"
+          />
+        </div>
+      </section>
 
       {/* Below the Fold - Book Details */}
-      <Container className="mt-24 sm:mt-32">
-        <div className="mx-auto max-w-3xl">
+      <Container className="mt-24 sm:mt-32" role="main">
+        <article className="mx-auto max-w-3xl">
           {/* Book Description */}
-          <div className="text-center">
+          <header className="text-center">
             <h2 className="font-display text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
               Une saga de fantasy épique
             </h2>
@@ -77,10 +130,10 @@ export default function Home() {
               Une saga où la magie a des règles, les âmes ont un but, et chaque
               choix peut bouleverser l&apos;équilibre du monde entier.
             </p>
-          </div>
+          </header>
 
           {/* Key Themes */}
-          <div className="mt-16 space-y-8">
+          <section aria-label="Key Themes" className="mt-16 space-y-8">
             <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
               <h3 className="font-display text-xl font-semibold text-zinc-800 dark:text-zinc-100">
                 Magie primitive et équilibre ancestral
@@ -108,13 +161,12 @@ export default function Home() {
                 Destins entrelacés à travers les générations
               </h3>
               <p className="mt-2 text-base text-zinc-600 dark:text-zinc-400">
-                Des personnages dont les vies sont tissées ensemble par des
-                fils invisibles, connectés à quelque chose de plus grand
-                qu&apos;eux.
+                Des personnages dont les vies sont tissées ensemble par des fils
+                invisibles, connectés à quelque chose de plus grand qu&apos;eux.
               </p>
             </div>
-          </div>
-        </div>
+          </section>
+        </article>
       </Container>
     </>
   )

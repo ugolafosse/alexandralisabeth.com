@@ -361,10 +361,13 @@ export function Header() {
   return (
     <>
       <header
-        className="pointer-events-none relative z-50 flex flex-none flex-col"
+        className={clsx(
+          'pointer-events-none relative z-50 flex flex-none flex-col',
+          isHomePage && 'absolute inset-x-0 top-0',
+        )}
         style={{
-          height: 'var(--header-height)',
-          marginBottom: 'var(--header-mb)',
+          height: isHomePage ? undefined : 'var(--header-height)',
+          marginBottom: isHomePage ? undefined : 'var(--header-mb)',
         }}
       >
         {/* Avatar hidden on homepage per user request
@@ -409,14 +412,20 @@ export function Header() {
         */}
         <div
           ref={headerRef}
-          className="top-0 z-10 h-16 pt-6"
+          className={clsx(
+            'top-0 z-10',
+            isHomePage ? 'h-0 pt-6' : 'h-16 pt-6',
+          )}
           style={{
             position:
               'var(--header-position)' as React.CSSProperties['position'],
           }}
         >
           <Container
-            className="top-(--header-top,--spacing(6)) w-full"
+            className={clsx(
+              'top-(--header-top,--spacing(6)) w-full',
+              isHomePage && 'opacity-0 pointer-events-none',
+            )}
             style={{
               position:
                 'var(--header-inner-position)' as React.CSSProperties['position'],

@@ -11,15 +11,15 @@ export default function Letter() {
 
         <div className="prose-zinc prose mt-8 dark:prose-invert">
           <p>
+            Bienvenue sur <strong>alexandralisabeth.com</strong> — ton futur QG
+            d'écrivaine célebre.😉
+          </p>
+
+          <p>
             Bon, déjà : <strong>joyeux anniversaire en retard</strong>. Je sais,
             je sais. Les dates et moi, c'est compliqué. Mais cette fois, ça me
             fait vraiment chier parce que c'est toi, et que justement, je
             pensais à ca bien avant ton anniversaire.
-          </p>
-
-          <p>
-            Bienvenue sur <strong>alexandralisabeth.com</strong> — ton futur QG
-            d'écrivaine célebre.😉.
           </p>
 
           <p>
@@ -197,13 +197,15 @@ Voici mes réponses à tes 8 questions :
 
 —
 Alexandra`)}`}
-              className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-lg ring-1 ring-teal-600/20 transition hover:bg-teal-500 hover:shadow-xl dark:bg-teal-500 dark:hover:bg-teal-400"
+              className="inline-flex items-center gap-2 rounded-lg bg-yellow-600 px-6 py-3 text-sm font-semibold text-white shadow-lg ring-1 ring-yellow-600/20 transition hover:bg-yellow-500 hover:shadow-xl dark:bg-yellow-500 dark:hover:bg-yellow-400"
             >
               Répondre maintenant
             </a>
           </div>
 
-          <p className="mt-8">— Ton frère qui oublie les dates mais pas le plus important 😘</p>
+          <p className="mt-8">
+            — Ton frère qui oublie les dates mais pas le plus important 😘
+          </p>
         </div>
       </div>
     </Container>
