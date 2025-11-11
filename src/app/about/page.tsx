@@ -69,8 +69,8 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Je suis Alexandra Lisabeth, autrice de la série "Chronique des
-            Premiers Hommes"
+            Je suis Alexandra Lisabeth, autrice de la série &ldquo;Chronique des
+            Premiers Hommes&rdquo;
           </h1>
 
           <Link
@@ -82,33 +82,33 @@ export default function About() {
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
               Je crée des mondes où la magie est aussi sauvage que la nature qui
-              l'entoure, où l'équilibre entre le bien et le mal n'est jamais
+              l&apos;entoure, où l&apos;équilibre entre le bien et le mal n&apos;est jamais
               garanti, et où chaque âme porte le poids de son destin. Avec la
               série <em>Chronique des Premiers Hommes</em>, je vous invite dans
               une époque primordiale où la survie, la chasse et la spiritualité
-              définissent l'existence même de l'humanité.
+              définissent l&apos;existence même de l&apos;humanité.
             </p>
             <p>
-              Mon parcours est un peu atypique : j'ai commencé ma carrière comme
+              Mon parcours est un peu atypique : j&apos;ai commencé ma carrière comme
               chiropracteure, passant mes journées à comprendre les mystères du
               corps humain. Mais les histoires qui tournaient dans ma tête — ces
-              univers de magie primitive, de destins entrelacés, d'équilibres
-              fragiles — ont fini par réclamer toute mon attention. Aujourd'hui,
-              je me consacre entièrement à l'écriture de mondes où chaque
+              univers de magie primitive, de destins entrelacés, d&apos;équilibres
+              fragiles — ont fini par réclamer toute mon attention. Aujourd&apos;hui,
+              je me consacre entièrement à l&apos;écriture de mondes où chaque
               génération possède ses élus, où les Âmes Blanches et Noires
-              maintiennent un ordre millénaire... jusqu'à ce que cet ordre soit
+              maintiennent un ordre millénaire... jusqu&apos;à ce que cet ordre soit
               brisé.
             </p>
             <p>
-              Ce qui me fascine dans la fantasy épique ? L'opportunité de
+              Ce qui me fascine dans la fantasy épique ? L&apos;opportunité de
               construire des systèmes de magie enracinés dans la nature même du
               monde, des cultures spirituelles qui respirent, des conflits qui
               dépassent le simple bien contre mal. Dans mes histoires, la magie
               a des règles, les âmes ont un but, et chaque choix peut bouleverser
-              l'équilibre du monde entier.
+              l&apos;équilibre du monde entier.
             </p>
             <p>
-              Quand je n'écris pas sur mes Premiers Hommes, vous me trouverez
+              Quand je n&apos;écris pas sur mes Premiers Hommes, vous me trouverez
               probablement en train de cartographier les territoires sauvages de
               mon univers, de développer les mythologies de ses peuples, ou de
               tisser les fils invisibles qui relient mes personnages à travers
