@@ -68,7 +68,7 @@ export default function About() {
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+          <h1 className="font-display text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
             Je suis Alexandra Lisabeth, autrice de la série &ldquo;Chronique des
             Premiers Hommes&rdquo;
           </h1>

@@ -8,11 +8,11 @@ function EmailButton({ className = '' }: { className?: string }) {
   const emailSubject = "Réponses à tes questions"
   const emailBody = `Salut !
 
-Voici mes réponses à tes 9 questions :
+Voici mes réponses à tes 8 questions :
 
 **AMAZON & VISIBILITÉ**
 
-1. Métadonnées Amazon optimisées ?
+1. Métadonnées Amazon optimisées (mots-clés, catégories) ?
 [Ta réponse]
 
 2. Stats mensuelles KDP (pages lues, ventes) ?
@@ -34,13 +34,10 @@ Voici mes réponses à tes 9 questions :
 
 **QUALITÉ & SUITE**
 
-7. Beta-lecture / Édition professionnelle ?
+7. Satisfaite de tes couvertures ?
 [Ta réponse]
 
-8. Satisfaite de tes couvertures ?
-[Ta réponse]
-
-9. Plan d'écriture (prochains livres, timing) ?
+8. Plan d'écriture (prochains livres, timing) ?
 [Ta réponse]
 
 —
@@ -126,73 +123,56 @@ export default function Letter() {
             </p>
           </div>
 
-          {/* Section 2: Le deal */}
+          {/* Section 2: La proposition */}
           <div className="mt-12 space-y-4 rounded-xl border-l-4 border-teal-500 bg-zinc-50 p-6 shadow-sm dark:bg-zinc-800/50">
             <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100">
-              Le deal
+              La proposition
             </h2>
+            <p>
+              Depuis le temps qu'on en parle — toi, moi, Suzy — qu'il faudrait
+              "vendre tes livres", faire du marketing, tout ça...
+            </p>
             <p className="text-lg font-medium text-zinc-800 dark:text-zinc-100">
-              Toi, tu écris. Moi, je vends tes livres.
+              Voilà ce que je propose : on commence.
             </p>
             <p>
-              Pas parce que tu peux pas le faire toi-même. Mais parce que ton
-              job, c'est d'écrire des univers qui tiennent debout. Le mien,
-              c'est de faire en sorte que les gens les découvrent.
+              Mon cadeau, c'est simple : j'ai des idées. Ça fait un moment que
+              j'y pense. Des trucs concrets, des quick wins, des tests à faire.
             </p>
-            <p>
-              La distribution, le marketing, Amazon, les communautés de
-              lecteurs. Tu gardes le contrôle créatif total. Je m'occupe du
-              reste.
-            </p>
-          </div>
-
-          {/* Section 3: Exemples concrets */}
-          <div className="mt-12 space-y-4">
-            <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100">
-              Concrètement, voici ce que je vais faire
-            </h2>
-            <div className="space-y-3 text-sm">
-              <div className="flex gap-3">
-                <span className="mt-1 text-teal-500">▸</span>
-                <p>
-                  <strong>Optimisation Amazon</strong> : Tester 50
-                  combinaisons de mots-clés et catégories jusqu'à trouver celles
-                  qui maximisent ta visibilité
-                </p>
-              </div>
-              <div className="flex gap-3">
-                <span className="mt-1 text-teal-500">▸</span>
-                <p>
-                  <strong>Liste email</strong> : Construire une landing page et
-                  une stratégie pour passer de 0 à 1000 abonnés qualifiés en 6
-                  mois
-                </p>
-              </div>
-              <div className="flex gap-3">
-                <span className="mt-1 text-teal-500">▸</span>
-                <p>
-                  <strong>Équipe ARC</strong> : Recruter 50 lecteurs early
-                  access qui laisseront des avis le jour du lancement
-                </p>
-              </div>
-              <div className="flex gap-3">
-                <span className="mt-1 text-teal-500">▸</span>
-                <p>
-                  <strong>Pub Amazon</strong> : Budget test de 200-500€/mois
-                  pour valider ce qui fonctionne, puis scaler
-                </p>
-              </div>
+            <div className="space-y-2">
+              <p className="font-medium text-zinc-800 dark:text-zinc-100">
+                Le problème avec l'autoédition ? C'est deux jobs en un :
+              </p>
+              <ul className="ml-4 space-y-1">
+                <li>
+                  <strong>Job 1</strong> : Écrire des bons livres (c'est ton
+                  truc, ce que t'aimes faire)
+                </li>
+                <li>
+                  <strong>Job 2</strong> : Marketing, distribution, Amazon, tout
+                  ce bordel (ça DEVRAIT PAS être ton job)
+                </li>
+              </ul>
             </div>
+            <p>
+              Alors dans mon temps libre, je vais tester des trucs. Pas un gros
+              projet. Juste : je pense à une tactique, je la teste, on voit ce
+              qui marche.
+            </p>
+            <p className="italic text-zinc-700 dark:text-zinc-300">
+              C'est pas un sprint, c'est un marathon. Mais il faut bien
+              commencer à courir.
+            </p>
           </div>
 
-          {/* Section 4: Les questions */}
+          {/* Section 3: Les questions */}
           <div className="mt-12">
             <h2 className="mb-6 text-2xl font-bold text-zinc-800 dark:text-zinc-100">
-              Les 9 questions
+              Les 8 questions
             </h2>
             <p className="mb-8 text-zinc-600 dark:text-zinc-400">
-              Pour te construire un plan d'action sur mesure, j'ai besoin de
-              savoir exactement où t'en es.
+              Mais pour pouvoir t'aider efficacement, j'ai besoin de savoir
+              exactement où t'en es.
             </p>
 
             <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
@@ -221,9 +201,8 @@ export default function Letter() {
               <QuestionCard
                 title="Qualité & Suite"
                 questions={[
-                  { q: 'Beta-lecture / Édition pro ?' },
                   { q: 'Satisfaite de tes couvertures ?' },
-                  { q: 'Plan d\'écriture ?', detail: '(prochains livres)' },
+                  { q: 'Plan d\'écriture ?', detail: '(prochains livres, timing)' },
                 ]}
               />
             </div>
