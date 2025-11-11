@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './fonts.css';
 @import './prism.css' layer(components);
 
 @plugin '@tailwindcss/typography';
@@ -7,6 +8,13 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --font-sans:
+    Mona Sans, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --font-display:
+    'EB Garamond', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+
   --text-xs: 0.8125rem;
   --text-xs--line-height: 1.5rem;
   --text-sm: 0.875rem;
