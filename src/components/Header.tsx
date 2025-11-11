@@ -432,11 +432,13 @@ export function Header() {
                 <MobileNavigation className="pointer-events-auto md:hidden" />
                 <DesktopNavigation className="pointer-events-auto hidden md:block" />
               </div>
+              {/* Theme toggle hidden - site locked to light mode
               <div className="flex justify-end md:flex-1">
                 <div className="pointer-events-auto">
                   <ThemeToggle />
                 </div>
               </div>
+              */}
             </div>
           </Container>
         </div>

@@ -26,15 +26,16 @@ export function Footer() {
         <div className="border-t border-zinc-100 pt-10 pb-16 dark:border-zinc-700/40">
           <ContainerInner>
             <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+              {/* Navigation hidden for launch - can be re-enabled later
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 <NavLink href="/about">About</NavLink>
                 <NavLink href="/projects">Projects</NavLink>
                 <NavLink href="/speaking">Speaking</NavLink>
                 <NavLink href="/uses">Uses</NavLink>
               </div>
+              */}
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Spencer Sharp. All rights
-                reserved.
+                &copy; {new Date().getFullYear()} Alexandra Lisabeth. Tous droits réservés.
               </p>
             </div>
           </ContainerInner>
